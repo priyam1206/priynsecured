@@ -1,0 +1,17 @@
+PRIYN Secured Crawler Directives
+
+User-agent: *
+Allow: /
+Allow: /static/
+
+Specifically allow AI search crawlers
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+Point to your sitemap
+
+Sitemap: https://priyam1206.github.io/priynsecured/sitemap.xml
