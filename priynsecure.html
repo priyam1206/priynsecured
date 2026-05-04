@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRIYN Secured | Military Grade File Vault</title>
+    <title>PRIYN Secured | Professional File Vault</title>
     
+    <!-- SEO & Indexing for Google/AI -->
+    <meta name="description" content="Secure your sensitive files with PRIYN Secured. Professional-grade local encryption that locks your data directly to your computer. 100% Offline.">
+    <meta name="keywords" content="PRIYN, Secured, file vault, local encryption, AES-256, privacy software, secure folder, windows vault">
+    <link rel="canonical" href="https://priyam1206.github.io/priynsecured/">
+    
+    <meta property="og:title" content="PRIYN Secured | Professional Local File Vault">
+    <meta property="og:description" content="Impenetrable file encryption by PRIYN. No cloud, no subscriptions, just privacy.">
+    <meta property="og:image" content="./static/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data for AI & Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PRIYN Secured",
+      "operatingSystem": "Windows 10, Windows 11",
+      "applicationCategory": "SecurityApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Professional AES-256 local vault from the PRIYN ecosystem. Features hardware-ID locking and automated memory wiping for absolute privacy.",
+      "softwareVersion": "3.0.0",
+      "author": {
+        "@type": "Person",
+        "name": "Priyam Trivedi",
+        "brand": "PRIYN"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -14,37 +47,25 @@
         ::-webkit-scrollbar { width: 6px; }
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background-color: transparent; border-radius: 10px; }
-        
-        html.is-scrolling ::-webkit-scrollbar-thumb,
-        ::-webkit-scrollbar-thumb:hover { background-color: #4a4a4a; }
-        
+        html.is-scrolling ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover { background-color: #4a4a4a; }
         * { scrollbar-width: thin; scrollbar-color: transparent transparent; }
         html.is-scrolling * { scrollbar-color: #4a4a4a transparent; }
         html { scroll-behavior: smooth; }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #050505;
-            color: #ffffff;
+            margin: 0; padding: 0;
+            background-color: #050505; color: #ffffff;
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            position: relative;
+            overflow-x: hidden; position: relative;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* --- Background Canvases --- */
         #hero-canvas, #footer-canvas {
-            position: absolute; 
-            top: 0; left: 0; width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             z-index: 0; pointer-events: none; 
         }
 
-        .content-wrapper {
-            position: relative;
-            z-index: 10;
-        }
+        .content-wrapper { position: relative; z-index: 10; }
 
         /* --- Top Navigation --- */
         .top-nav {
@@ -63,189 +84,62 @@
             display: flex; align-items: center; gap: 12px;
             text-transform: uppercase;
         }
-        
         .nav-brand span { color: #00FFBB; font-weight: 600; }
-        
-        /* Custom P/Lock Logo mirroring the software */
-        .nav-logo {
-            width: 24px; height: 24px;
-            fill: #ffffff;
-        }
+        .nav-logo { width: 28px; height: 28px; object-fit: contain; }
 
         .nav-links { display: flex; align-items: center; gap: 35px; }
-        .nav-links a {
-            color: #a0a0a0; text-decoration: none; font-size: 11px;
-            font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+        .nav-links a { color: #a0a0a0; text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s ease; }
         .nav-links a:hover { color: #ffffff; }
 
-        .btn-nav {
-            background: #ffffff; color: #050505 !important;
-            padding: 10px 20px; border-radius: 30px; font-weight: 800 !important;
-            transition: transform 0.2s ease, background 0.2s ease !important;
-        }
-        .btn-nav:hover { background: #e0e0e0; transform: scale(1.05); }
+        .btn-nav { background: #ffffff; color: #050505 !important; padding: 10px 20px; border-radius: 30px; font-weight: 800 !important; transition: transform 0.2s ease !important; }
+        .btn-nav:hover { transform: scale(1.05); background: #e0e0e0; }
 
-        /* --- Centered Hero Section --- */
-        .hero-section {
-            min-height: 100vh; min-height: 100dvh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            padding: 100px 5% 0; box-sizing: border-box;
-            position: relative; text-align: center;
-        }
-
+        /* --- Hero Section --- */
+        .hero-section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 5% 0; box-sizing: border-box; position: relative; text-align: center; }
         .hero-content { pointer-events: auto; z-index: 10; max-width: 900px; display: flex; flex-direction: column; align-items: center; }
-
-        .version-badge {
-            font-size: 11px; font-weight: 700; letter-spacing: 2px;
-            padding: 8px 16px; border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 40px; background: rgba(255,255,255,0.03);
-            margin-bottom: 35px; color: #a0a0a0;
-            display: inline-flex; align-items: center; gap: 8px;
-        }
-        .version-badge::before {
-            content: ""; display: block; width: 6px; height: 6px;
-            background: #00FFBB; border-radius: 50%;
-            box-shadow: 0 0 10px #00FFBB;
-        }
-
-        .hero-title {
-            font-size: clamp(45px, 8vw, 100px);
-            font-weight: 700; margin: 0 0 20px 0;
-            line-height: 1.1; letter-spacing: -0.03em;
-            color: #ffffff;
-        }
-
-        .hero-subtitle {
-            font-size: clamp(16px, 2vw, 18px);
-            line-height: 1.6; color: #888;
-            margin: 0 0 50px 0; max-width: 550px; font-weight: 400;
-        }
-
-        .typewriter-text {
-            background: linear-gradient(135deg, #00FFBB, #3b82f6);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text; color: transparent;
-            white-space: nowrap; /* Prevents awkward mid-word wrapping */
-        }
-
+        .version-badge { font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 8px 16px; border: 1px solid rgba(255,255,255,0.1); border-radius: 40px; background: rgba(255,255,255,0.03); margin-bottom: 35px; color: #a0a0a0; display: inline-flex; align-items: center; gap: 8px; }
+        .version-badge::before { content: ""; display: block; width: 6px; height: 6px; background: #00FFBB; border-radius: 50%; box-shadow: 0 0 10px #00FFBB; }
+        
+        .hero-title { font-size: clamp(45px, 8vw, 100px); font-weight: 700; margin: 0 0 20px 0; line-height: 1.1; letter-spacing: -0.03em; color: #ffffff; }
+        .typewriter-text { background: linear-gradient(135deg, #00FFBB, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; white-space: nowrap; }
+        
+        .hero-subtitle { font-size: clamp(16px, 2vw, 18px); line-height: 1.6; color: #888; margin: 0 0 50px 0; max-width: 550px; font-weight: 400; }
         .hero-actions { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; pointer-events: auto; }
         
-        .btn-primary {
-            background: #ffffff; color: #050505;
-            padding: 16px 40px; border-radius: 40px;
-            font-size: 13px; font-weight: 800; letter-spacing: 1px;
-            text-transform: uppercase; text-decoration: none;
-            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-        }
-        .btn-primary:hover { 
-            transform: translateY(-2px); 
-            background: #f0f0f0; 
-            box-shadow: 0 10px 20px rgba(255,255,255,0.1);
-        }
-        
-        .btn-secondary {
-            background: transparent; color: #ffffff;
-            padding: 16px 40px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.2);
-            font-size: 13px; font-weight: 800; letter-spacing: 1px;
-            text-transform: uppercase; text-decoration: none;
-            transition: all 0.3s ease;
-        }
+        .btn-primary { background: #ffffff; color: #050505; padding: 16px 40px; border-radius: 40px; font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); background: #f0f0f0; box-shadow: 0 10px 20px rgba(255,255,255,0.1); }
+        .btn-secondary { background: transparent; color: #ffffff; padding: 16px 40px; border-radius: 40px; border: 1px solid rgba(255,255,255,0.2); font-size: 13px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; }
         .btn-secondary:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.4); }
 
-        /* --- Bento Box Architecture Section --- */
-        .features-section {
-            padding: 120px 5%; background-color: #050505;
-            position: relative; z-index: 10;
-        }
-
+        /* --- Bento Box Features Section --- */
+        .features-section { padding: 120px 5%; background-color: #050505; position: relative; z-index: 10; }
         .section-header { text-align: center; margin-bottom: 80px; }
         .section-header h2 { font-size: clamp(30px, 4vw, 45px); font-weight: 600; letter-spacing: -1px; margin: 0; }
         .section-header p { color: #888; margin-top: 15px; font-size: 16px; max-width: 500px; margin-left: auto; margin-right: auto; }
 
-        .bento-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto auto;
-            gap: 20px; max-width: 1100px; margin: 0 auto;
-        }
-
-        .bento-card {
-            background: rgba(20, 20, 20, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 20px; padding: 40px;
-            transition: all 0.4s ease;
-            display: flex; flex-direction: column;
-            pointer-events: auto;
-        }
-
-        .bento-card:hover {
-            background: rgba(30, 30, 30, 0.8);
-            border-color: rgba(255, 255, 255, 0.15);
-            transform: translateY(-4px);
-        }
-
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .bento-card { background: rgba(20, 20, 20, 0.6); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 40px; transition: all 0.4s ease; display: flex; flex-direction: column; pointer-events: auto; }
+        .bento-card:hover { background: rgba(30, 30, 30, 0.8); border-color: rgba(255, 255, 255, 0.15); transform: translateY(-4px); }
         .bento-wide { grid-column: span 2; }
-        .bento-tall { grid-row: span 2; }
-
-        .card-icon {
-            width: 45px; height: 45px; margin-bottom: 25px;
-            display: flex; align-items: center; justify-content: center;
-            background: rgba(0, 255, 187, 0.1); border-radius: 12px; color: #00FFBB;
-        }
-
+        .card-icon { width: 45px; height: 45px; margin-bottom: 25px; display: flex; align-items: center; justify-content: center; background: rgba(0, 255, 187, 0.1); border-radius: 12px; color: #00FFBB; }
         .bento-card h3 { font-size: 20px; font-weight: 600; margin: 0 0 12px 0; color: #ffffff; letter-spacing: -0.5px; }
         .bento-card p { font-size: 15px; line-height: 1.6; color: #999; margin: 0; font-weight: 400; }
 
         /* --- Download CTA Section --- */
-        .cta-section {
-            padding: 100px 5% 150px; background-color: #050505;
-            position: relative; z-index: 10;
-        }
-
-        .cta-container {
-            max-width: 900px; margin: 0 auto;
-            background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.8) 100%);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 24px; padding: 80px 40px;
-            text-align: center; position: relative; overflow: hidden;
-            pointer-events: auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-
-        .cta-container::before {
-            content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-            width: 60%; height: 1px; background: linear-gradient(90deg, transparent, #00FFBB, transparent);
-            opacity: 0.3;
-        }
-
-        .cta-container h2 { font-size: clamp(32px, 5vw, 56px); font-weight: 700; margin: 0 0 20px 0; letter-spacing: -2px; }
-        .cta-container p { font-size: 16px; color: #888; margin: 0 auto 40px; max-width: 450px; line-height: 1.6; }
-
-        .terminal-box {
-            background: #000; border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px; padding: 15px 25px; margin: 0 auto 40px;
-            max-width: 400px; display: flex; justify-content: space-between; align-items: center;
-            font-family: monospace; color: #a855f7; font-size: 14px;
-        }
+        .cta-section { padding: 100px 5% 150px; background-color: #050505; position: relative; z-index: 10; }
+        .cta-container { max-width: 900px; margin: 0 auto; background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.8) 100%); border: 1px solid rgba(255,255,255,0.05); border-radius: 24px; padding: 80px 40px; text-align: center; position: relative; overflow: hidden; pointer-events: auto; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .terminal-box { background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 15px 25px; margin: 0 auto 40px; max-width: 400px; display: flex; justify-content: space-between; align-items: center; font-family: monospace; color: #a855f7; font-size: 14px; }
 
         /* --- Footer --- */
-        .footer {
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 40px 5%; display: flex; justify-content: space-between; align-items: center;
-            font-size: 13px; color: #666; position: relative; z-index: 10; background: #050505;
-        }
+        .footer { border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #666; position: relative; z-index: 10; background: #050505; }
         .footer-links a { color: #888; text-decoration: none; margin-left: 25px; transition: color 0.3s; font-weight: 500; }
         .footer-links a:hover { color: #fff; }
 
-        /* Scroll Animations */
         .hidden-scroll { opacity: 0; transform: translateY(30px); }
         .show-scroll { opacity: 1 !important; transform: translateY(0) !important; transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
 
-        /* --- Responsive Design --- */
         @media (max-width: 1024px) {
-            .bento-wide, .bento-tall { grid-column: span 1; grid-row: span 1; }
+            .bento-wide { grid-column: span 1; }
             .bento-grid { grid-template-columns: 1fr; max-width: 600px; }
         }
         @media (max-width: 768px) {
@@ -253,10 +147,8 @@
             .nav-links { display: none; }
             .hero-section { padding-top: 130px; }
             .hero-actions { flex-direction: column; width: 100%; max-width: 300px; }
-            .btn-primary, .btn-secondary { width: 100%; text-align: center; box-sizing: border-box; }
-            .cta-container { padding: 60px 20px; }
+            .btn-primary, .btn-secondary { width: 100%; text-align: center; }
             .footer { flex-direction: column; gap: 20px; text-align: center; }
-            .footer-links a { margin: 0 10px; }
         }
     </style>
 </head>
@@ -264,14 +156,9 @@
 
     <div class="content-wrapper">
         
-        <!-- Navigation -->
         <nav class="top-nav" id="navbar">
             <div class="nav-brand">
-                <!-- Lock/P Logo -->
-                <svg class="nav-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 8V6a4 4 0 0 0-8 0v2H6v10h12V8h-2zm-6-2a2 2 0 1 1 4 0v2h-4V6zm2 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
-                    <path d="M4 2v20h4v-2H6V4h6v4h4v10h-2v2h4V2H4z" opacity="0.5"/>
-                </svg>
+                <img src="./static/logo.png" alt="PRIYN Logo" class="nav-logo" onerror="this.style.display='none'">
                 PRIYN <span>Secured</span>
             </div>
             <div class="nav-links">
@@ -282,88 +169,71 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
         <section class="hero-section">
             <canvas id="hero-canvas"></canvas>
-
             <div class="hero-content">
                 <div class="version-badge">VERSION 3.0 LIVE</div>
                 <h1 class="hero-title">The Ultimate<br><span id="hero-typewriter" class="typewriter-text">Vault.</span><span style="animation: blink 1s step-end infinite; color: #00FFBB;">_</span></h1>
-                <p class="hero-subtitle">Fast, reliable, and impenetrable file encryption. Secure your personal and professional files with a vault that locks directly to your device.</p>
+                <p class="hero-subtitle">World-class protection for your files. <strong>Secured</strong> by PRIYN — professional-grade local encryption that stays on your computer, not the cloud. Simple, fast, and 100% offline.</p>
                 <div class="hero-actions">
-                    <a href="#download" class="btn-primary">Download for Windows</a>
+                    <a href="https://github.com/priyam1206/priynsecured/releases/download/v3.0/secure.exe" class="btn-primary">Download Secured for Windows</a>
                     <a href="#architecture" class="btn-secondary">View Features</a>
                 </div>
             </div>
         </section>
 
-        <!-- Bento Box Features Section -->
         <section class="features-section" id="architecture">
             <div class="section-header hidden-scroll">
-                <h2>Engineered for Security</h2>
-                <p>Powerful protection designed to be incredibly simple. No bottlenecks, no complicated setups.</p>
+                <h2>Total File Control</h2>
+                <p>Advanced security from the PRIYN family. No complicated settings, just instant protection.</p>
             </div>
             
             <div class="bento-grid">
-                <!-- Card 1 -->
-                <div class="bento-card bento-wide hidden-scroll" style="transition-delay: 0.1s;">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-                    </div>
-                    <h3>Lightning Fast Processing</h3>
-                    <p>Engineered for maximum speed. PRIYN automatically optimizes your system's resources to encrypt large files and massive folders instantly, without slowing down your computer's performance.</p>
+                <div class="bento-card bento-wide hidden-scroll">
+                    <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                    <h3>Insanely Fast</h3>
+                    <p>Optimized for speed. Encrypt thousands of files or giant folders in seconds. PRIYN Secured works quietly in the background without slowing down your computer.</p>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bento-card hidden-scroll" style="transition-delay: 0.2s;">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    </div>
-                    <h3>Device Locking</h3>
-                    <p>Your vault is cryptographically locked to your specific physical device. Even if files are copied or stolen, they remain completely inaccessible on any other computer.</p>
+                <div class="bento-card hidden-scroll" style="transition-delay: 0.1s;">
+                    <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+                    <h3>Hardware Bound</h3>
+                    <p>Secured locks your vault to your specific PC hardware. Even if your files are stolen on a USB drive, they cannot be opened on any other computer.</p>
                 </div>
                 
-                <!-- Card 3 -->
                 <div class="bento-card hidden-scroll" style="transition-delay: 0.1s;">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>Absolute Privacy</h3>
-                    <p>Complete privacy from the ground up. Filenames are automatically hidden, and the system instantly wipes all background memory traces the moment you close the app.</p>
+                    <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <h3>Total Privacy</h3>
+                    <p>No cloud servers, no trackers, and no traces. PRIYN Secured wipes all sensitive traces from your memory the moment you close the application.</p>
                 </div>
 
-                <!-- Card 4 -->
                 <div class="bento-card bento-wide hidden-scroll" style="transition-delay: 0.2s;">
-                    <div class="card-icon">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                    </div>
-                    <h3>Tamper Protection</h3>
-                    <p>Built-in integrity checks constantly monitor your vault. If anyone attempts to delete, rename, or tamper with a locked file outside the app, the system detects the breach and locks down to prevent data corruption.</p>
+                    <div class="card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                    <h3>Tamper Proof</h3>
+                    <p>Constant monitoring keeps your data safe. If anyone tries to delete or modify your locked files outside of the application, the vault detects the change and locks down instantly.</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="cta-section" id="download">
             <canvas id="footer-canvas"></canvas>
             <div class="cta-container hidden-scroll">
-                <h2>Secure your workflow.</h2>
-                <p>Protect your files today. Download the lightweight desktop vault. Runs completely offline with zero installation required.</p>
+                <h2>Start securing your files.</h2>
+                <p>Download the standalone Windows app from PRIYN. Zero installation, zero cloud, 100% control.</p>
                 
                 <div class="terminal-box">
-                    <span>> Download PRIYN_v3.exe</span>
-                    <span style="color: #666;">24.5 MB</span>
+                    <span>> Download secure.exe</span>
+                    <span style="color: #666;">49.5 MB</span>
                 </div>
 
-                <a href="PRIYN_Secured_v3.exe" class="btn-primary" style="background: #00FFBB; color: #000;">
-                    Download Latest Release
+                <a href="https://github.com/priyam1206/priynsecured/releases/download/v3.0/secure.exe" class="btn-primary" style="background: #00FFBB; color: #000;">
+                    Download Secured v3.0
                 </a>
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
-            <div>© 2026 Priyam Trivedi. Engineered in Vellore.</div>
+            <div>© 2026 PRIYN. Engineered in Vellore by Priyam Trivedi.</div>
             <div class="footer-links">
                 <a href="https://github.com/priyam1206">GitHub</a>
                 <a href="https://priyn.com">Dev Portfolio</a>
@@ -373,261 +243,108 @@
     </div>
 
     <script>
-        // --- Scroll Hiding Navbar & Animations ---
         let lastScrollTop = 0;
         const navbar = document.getElementById('navbar');
-        
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                navbar.style.transform = 'translateY(-100%)';
-            } else {
-                navbar.style.transform = 'translateY(0)';
-            }
+            navbar.style.transform = (scrollTop > lastScrollTop && scrollTop > 100) ? 'translateY(-100%)' : 'translateY(0)';
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         }, { passive: true });
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show-scroll');
-                    observer.unobserve(entry.target); 
-                }
-            });
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('show-scroll'); observer.unobserve(entry.target); } });
         }, { threshold: 0.1 });
+        document.querySelectorAll('.hidden-scroll').forEach(el => observer.observe(el));
 
-        document.querySelectorAll('.hidden-scroll').forEach(el => { observer.observe(el); });
-
-        // --- Typewriter Effect ---
         const words = ["Vault.", "Fortress.", "Encryption.", "Privacy."];
         const typeEl = document.getElementById("hero-typewriter");
         let wIdx = 0, cIdx = words[0].length, isDel = false, firstRun = true;
-
         function typeEffect() {
             const current = words[wIdx];
             if (firstRun) { firstRun = false; isDel = true; setTimeout(typeEffect, 3000); return; }
             if (isDel) cIdx--; else cIdx++;
-            
             typeEl.textContent = current.substring(0, cIdx);
             let speed = isDel ? 40 : 80 + Math.random() * 50;
-
             if (!isDel && cIdx === current.length) { speed = 3000; isDel = true; } 
             else if (isDel && cIdx === 0) { isDel = false; wIdx = (wIdx + 1) % words.length; speed = 400; }
             setTimeout(typeEffect, speed);
         }
         typeEffect();
 
-        // --- Particle Engine ---
-        const hCanvas = document.getElementById('hero-canvas');
-        const fCanvas = document.getElementById('footer-canvas');
-        const hCtx = hCanvas.getContext('2d', { willReadFrequently: true });
-        const fCtx = fCanvas.getContext('2d');
-        const hSec = document.querySelector('.hero-section');
-        const fSec = document.querySelector('.cta-section');
+        const hCanvas = document.getElementById('hero-canvas'), fCanvas = document.getElementById('footer-canvas');
+        const hCtx = hCanvas.getContext('2d', { willReadFrequently: true }), fCtx = fCanvas.getContext('2d');
+        const hSec = document.querySelector('.hero-section'), fSec = document.querySelector('.cta-section');
+        let isMobile = window.innerWidth <= 768, hw, hh, fw, fh;
+        function resize() { hw = hCanvas.width = hSec.clientWidth; hh = hCanvas.height = hSec.clientHeight; fw = fCanvas.width = fSec.clientWidth; fh = fCanvas.height = fSec.clientHeight; }
 
-        let isMobile = window.innerWidth <= 768; 
-        let hw, hh, fw, fh;
-        
-        function resize() {
-            hw = hCanvas.width = hSec.clientWidth; hh = hCanvas.height = hSec.clientHeight;
-            fw = fCanvas.width = fSec.clientWidth; fh = fCanvas.height = fSec.clientHeight;
-        }
-
-        let hParts = [], fParts = [];
-        const colors = ['#ffffff', '#00FFBB', '#3b82f6'];
-        const symbols = ["PRIYN", "SECURE", "VAULT"]; 
-        let symIdx = 0;
-        
-        const mH = isMobile ? 600 : 1500; 
-        const mF = isMobile ? 500 : 1200; 
-
+        let hParts = [], fParts = [], colors = ['#ffffff', '#00FFBB', '#3b82f6'], symbols = ["PRIYN", "SECURE", "VAULT"], symIdx = 0;
+        const mH = isMobile ? 600 : 1500, mF = isMobile ? 500 : 1200;
         const mouse = { r: isMobile ? 80 : 150, f: 0.04 };
         let mx = -1000, my = -1000;
 
         class Particle {
             constructor(isFooter = false) {
-                this.isF = isFooter;
-                this.x = 0; this.y = 0; this.tx = 0; this.ty = 0;
-                this.vx = 0; this.vy = 0;
-                this.size = Math.random() * 1.5 + 0.5; 
-                this.col = colors[Math.floor(Math.random() * colors.length)];
-                this.rAng = Math.random() * Math.PI * 2;
-                this.rSpd = Math.random() * 0.02;
-                this.ease = isFooter ? 0.12 : 0.01 + Math.random() * 0.015; // Stronger ease for footer alignment
-                this.tAssigned = false; this.init = false; this.op = 0; 
+                this.isF = isFooter; this.x = 0; this.y = 0; this.tx = 0; this.ty = 0; this.vx = 0; this.vy = 0;
+                this.size = Math.random() * 1.5 + 0.5; this.col = colors[Math.floor(Math.random() * colors.length)];
+                this.rAng = Math.random() * Math.PI * 2; this.rSpd = Math.random() * 0.02;
+                this.ease = isFooter ? 0.12 : 0.01 + Math.random() * 0.015; this.tAssigned = false; this.init = false; this.op = 0;
             }
-
             update(lx, ly) {
                 const tOp = this.tAssigned ? (this.col === '#ffffff' ? (this.isF ? 0.4 : 0.25) : (this.isF ? 0.7 : 0.5)) : 0;
-                this.op += (tOp - this.op) * 0.02; 
-                if (!this.tAssigned && this.op < 0.01) return;
-
-                const dx = this.x - lx; const dy = this.y - ly;
-                const dist = Math.sqrt(dx*dx + dy*dy);
-
-                if (dist < mouse.r) {
-                    const fr = (mouse.r - dist) / mouse.r;
-                    this.vx += (dx/dist) * fr * mouse.f * 50; 
-                    this.vy += (dy/dist) * fr * mouse.f * 50;
-                }
-
-                this.rAng += this.rSpd;
-                const txD = this.tx + Math.cos(this.rAng) * 0.5;
-                const tyD = this.ty + Math.sin(this.rAng) * 0.5;
-                
-                this.vx *= 0.85; this.vy *= 0.85; 
-                this.x += this.vx; this.y += this.vy;
-
-                if (this.tAssigned) {
-                    let ex = (txD - this.x) * this.ease;
-                    let ey = (tyD - this.y) * this.ease;
-                    if (!this.isF) {
-                        const spd = Math.sqrt(ex*ex + ey*ey);
-                        if (spd > 3.5) { ex = (ex/spd)*3.5; ey = (ey/spd)*3.5; }
-                    }
-                    this.x += ex; this.y += ey;
-                }
+                this.op += (tOp - this.op) * 0.02; if (!this.tAssigned && this.op < 0.01) return;
+                const dx = this.x - lx, dy = this.y - ly, dist = Math.sqrt(dx*dx + dy*dy);
+                if (dist < mouse.r) { const fr = (mouse.r - dist) / mouse.r; this.vx += (dx/dist) * fr * mouse.f * 50; this.vy += (dy/dist) * fr * mouse.f * 50; }
+                this.rAng += this.rSpd; const txD = this.tx + Math.cos(this.rAng) * 0.5, tyD = this.ty + Math.sin(this.rAng) * 0.5;
+                this.vx *= 0.85; this.vy *= 0.85; this.x += this.vx; this.y += this.vy;
+                if (this.tAssigned) { let ex = (txD - this.x) * this.ease, ey = (tyD - this.y) * this.ease; if (!this.isF) { const spd = Math.sqrt(ex*ex + ey*ey); if (spd > 3.5) { ex = (ex/spd)*3.5; ey = (ey/spd)*3.5; } } this.x += ex; this.y += ey; }
             }
-
-            draw(ctx) {
-                if (this.op < 0.01) return;
-                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2);
-                ctx.globalAlpha = this.op; ctx.fillStyle = this.col; ctx.fill(); ctx.globalAlpha = 1; 
-            }
+            draw(ctx) { if (this.op < 0.01) return; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI*2); ctx.globalAlpha = this.op; ctx.fillStyle = this.col; ctx.fill(); ctx.globalAlpha = 1; }
         }
 
-        function initP() {
-            hParts = []; for(let i=0; i<mH; i++) hParts.push(new Particle(false));
-            fParts = []; for(let i=0; i<mF; i++) fParts.push(new Particle(true));
-        }
-
+        function initP() { hParts = []; for(let i=0; i<mH; i++) hParts.push(new Particle(false)); fParts = []; for(let i=0; i<mF; i++) fParts.push(new Particle(true)); }
         function getShapes(txt) {
-            const tgs = []; const oC = document.createElement('canvas');
-            oC.width = hw; oC.height = hh; const oCtx = oC.getContext('2d', { willReadFrequently: true });
-            
-            let fSz = isMobile ? 180 : 450; 
-            oCtx.font = `800 ${fSz}px Inter, sans-serif`;
-            const tw = oCtx.measureText(txt).width;
-            if(tw > hw * 0.9) {
-                fSz = Math.floor(fSz * ((hw * 0.9) / tw));
-                oCtx.font = `800 ${fSz}px Inter, sans-serif`;
-            }
-
-            oCtx.fillStyle = 'white'; oCtx.textAlign = 'center'; oCtx.textBaseline = 'middle';
-            oCtx.fillText(txt, hw/2, hh/2 - 40); 
-
-            try {
-                const img = oCtx.getImageData(0,0,hw,hh).data;
-                const g = isMobile ? 6 : 9; 
-                for (let y=0; y<hh; y+=g) {
-                    for (let x=0; x<hw; x+=g) {
-                        if (img[(y*hw + x)*4 + 3] > 128) tgs.push({x,y});
-                    }
-                }
-            } catch (e) { return; }
-
-            if (!tgs.length) return;
-            for (let i = tgs.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [tgs[i], tgs[j]] = [tgs[j], tgs[i]];
-            }
-
-            hParts.forEach((p, i) => {
-                if (i < tgs.length) {
-                    p.tx = tgs[i].x; p.ty = tgs[i].y;
-                    if (!p.init) {
-                        p.x = p.tx + (Math.random()*hw - hw/2); p.y = p.ty + (Math.random()*hh - hh/2);
-                        p.init = true; p.op = 0; 
-                    }
-                    p.tAssigned = true;
-                } else p.tAssigned = false; 
-            });
+            const tgs = []; const oC = document.createElement('canvas'); oC.width = hw; oC.height = hh; const oCtx = oC.getContext('2d', { willReadFrequently: true });
+            let fSz = isMobile ? 180 : 450; oCtx.font = `800 ${fSz}px Inter, sans-serif`;
+            const tw = oCtx.measureText(txt).width; if(tw > hw * 0.9) { fSz = Math.floor(fSz * ((hw * 0.9) / tw)); oCtx.font = `800 ${fSz}px Inter, sans-serif`; }
+            oCtx.fillStyle = 'white'; oCtx.textAlign = 'center'; oCtx.textBaseline = 'middle'; oCtx.fillText(txt, hw/2, hh/2 - 40);
+            try { const img = oCtx.getImageData(0,0,hw,hh).data; const g = isMobile ? 6 : 9; for (let y=0; y<hh; y+=g) { for (let x=0; x<hw; x+=g) { if (img[(y*hw + x)*4 + 3] > 128) tgs.push({x,y}); } } } catch (e) { return; }
+            if (!tgs.length) return; for (let i = tgs.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [tgs[i], tgs[j]] = [tgs[j], tgs[i]]; }
+            hParts.forEach((p, i) => { if (i < tgs.length) { p.tx = tgs[i].x; p.ty = tgs[i].y; if (!p.init) { p.x = p.tx + (Math.random()*hw - hw/2); p.y = p.ty + (Math.random()*hh - hh/2); p.init = true; p.op = 0; } p.tAssigned = true; } else p.tAssigned = false; });
         }
-
-        // --- ENHANCED ALIGNMENT FOR FOOTER ---
+        
         function formFooterBox() {
-            const box = document.querySelector('.cta-container');
-            if(!box) return;
-            const bRect = box.getBoundingClientRect();
-            const fRect = fSec.getBoundingClientRect();
+            const box = document.querySelector('.cta-container'); if(!box) return; 
+            const bRect = box.getBoundingClientRect(), fRect = fSec.getBoundingClientRect();
+            const cy = (bRect.top - fRect.top) + bRect.height/2, cx = (bRect.left - fRect.left) + bRect.width/2;
+            const tgs = [], padding = 20, width = bRect.width + padding * 2, height = bRect.height + padding * 2;
+            const left = -width / 2, right = width / 2, top = -height / 2, bottom = height / 2, dotSpacing = isMobile ? 12 : 14;
             
-            // Calculate absolute center relative to the footer canvas
-            const cy = (bRect.top - fRect.top) + bRect.height/2;
-            const cx = (bRect.left - fRect.left) + bRect.width/2;
-
-            const tgs = [];
-            const padding = 20; // Increased padding for cleaner framing
-            const width = bRect.width + padding * 2;
-            const height = bRect.height + padding * 2;
-            
-            const left = -width / 2;
-            const right = width / 2;
-            const top = -height / 2;
-            const bottom = height / 2;
-            
-            const dotSpacing = isMobile ? 12 : 14; 
-
-            // Define points strictly in order for deterministic assignment
             for(let x = left; x <= right; x += dotSpacing) tgs.push({ox: x, oy: top});
             for(let y = top + dotSpacing; y < bottom; y += dotSpacing) tgs.push({ox: right, oy: y});
             for(let x = right; x >= left; x -= dotSpacing) tgs.push({ox: x, oy: bottom});
             for(let y = bottom - dotSpacing; y > top; y -= dotSpacing) tgs.push({ox: left, oy: y});
 
-            // DO NOT shuffle tgs here to keep the border "continuous" in memory index
-            
-            fParts.forEach((p, i) => {
-                if (i < tgs.length) {
-                    p.tx = cx + tgs[i].ox; p.ty = cy + tgs[i].oy;
-                    if (!p.init) {
-                        p.x = p.tx; p.y = p.ty; // Start at target for instant alignment on load
-                        p.init = true; p.op = 0;
-                    }
-                    p.tAssigned = true;
-                } else {
-                    p.tAssigned = false;
-                }
+            fParts.forEach((p, i) => { 
+                if (i < tgs.length) { 
+                    p.tx = cx + tgs[i].ox; p.ty = cy + tgs[i].oy; 
+                    if (!p.init) { p.x = p.tx; p.y = p.ty; p.init = true; p.op = 0; } 
+                    p.tAssigned = true; 
+                } else p.tAssigned = false; 
             });
         }
 
         function animP() {
-            hCtx.clearRect(0,0,hw,hh); fCtx.clearRect(0,0,fw,fh); 
+            hCtx.clearRect(0,0,hw,hh); fCtx.clearRect(0,0,fw,fh);
             let hx = -1000, hy = -1000, bx = -1000, by = -1000;
-
-            if (mx !== -1000) {
-                const hR = hSec.getBoundingClientRect(); const fR = fSec.getBoundingClientRect();
-                hx = mx - hR.left; hy = my - hR.top;
-                bx = mx - fR.left; by = my - fR.top;
-            }
-
-            hParts.forEach(p => { p.update(hx, hy); p.draw(hCtx); });
-            fParts.forEach(p => { p.update(bx, by); p.draw(fCtx); });
+            if (mx !== -1000) { const hR = hSec.getBoundingClientRect(), fR = fSec.getBoundingClientRect(); hx = mx - hR.left; hy = my - hR.top; bx = mx - fR.left; by = my - fR.top; }
+            hParts.forEach(p => { p.update(hx, hy); p.draw(hCtx); }); fParts.forEach(p => { p.update(bx, by); p.draw(fCtx); });
             requestAnimationFrame(animP);
         }
 
         window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        const resM = () => { mx = -1000; my = -1000; };
-        document.addEventListener('mouseleave', resM); window.addEventListener('touchend', resM);
-        window.addEventListener('touchstart', e => { mx = e.touches[0].clientX; my = e.touches[0].clientY; });
-        window.addEventListener('touchmove', e => { mx = e.touches[0].clientX; my = e.touches[0].clientY; });
-
-        window.addEventListener('resize', () => {
-            isMobile = window.innerWidth <= 768; resize();
-            getShapes(symbols[symIdx === 0 ? symbols.length-1 : symIdx-1]); 
-            formFooterBox();
-        });
-
-        window.addEventListener('load', () => {
-            resize(); initP(); 
-            getShapes(symbols[symIdx]); symIdx++;
-            formFooterBox(); 
-            setInterval(() => { getShapes(symbols[symIdx]); symIdx = (symIdx+1)%symbols.length; }, 7000); 
-            animP();
-        });
-
-        // Periodic alignment check for the footer
-        window.addEventListener('scroll', () => {
-            formFooterBox(); // Keep dots locked to box during scroll
-        }, { passive: true });
+        window.addEventListener('resize', () => { isMobile = window.innerWidth <= 768; resize(); getShapes(symbols[symIdx === 0 ? symbols.length-1 : symIdx-1]); formFooterBox(); });
+        window.addEventListener('load', () => { resize(); initP(); getShapes(symbols[symIdx]); symIdx++; formFooterBox(); setInterval(() => { getShapes(symbols[symIdx]); symIdx = (symIdx+1)%symbols.length; }, 7000); animP(); });
+        window.addEventListener('scroll', formFooterBox, { passive: true });
     </script>
 </body>
 </html>
